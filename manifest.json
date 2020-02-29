@@ -1,7 +1,7 @@
   {
-    "name": "Getting Started Example",
+    "name": "Gestify",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Spotify control using hand gestures",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "background": {
       "scripts": ["background.js"],
