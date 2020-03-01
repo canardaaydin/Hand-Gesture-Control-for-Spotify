@@ -19,12 +19,8 @@ console.clear();
 
 var body = document.body;
 var modal = createModal(document.getElementById("modal-1"));
-var openButton = document.getElementById("open-button");
 
-openButton.addEventListener("click", function() {
-  console.log('arda');
-  modal.open();
-});
+modal.open();
 
 function createModal(container) {
   console.log(container);
