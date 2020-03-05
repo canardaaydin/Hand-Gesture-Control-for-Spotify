@@ -17,6 +17,7 @@
 
 console.clear();
 
+
 var body = document.body;
 var modal = createModal(document.getElementById("modal-1"));
 

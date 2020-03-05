@@ -1,5 +1,8 @@
-  chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-      console.log('The color is green.');
-    });
+console = chrome.extension.getBackgroundPage().console;
+chrome.tabs.onUpdated.addListener(function() {
+  (chrome.tabs).forEach(element => {
+    if ((element.url).includes("localhost")){
+      console.log(element.url);
+    }
   });
+});
