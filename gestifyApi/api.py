@@ -17,10 +17,6 @@ endpoint = "https://accounts.spotify.com/api/token"
 auth_code = ""
 
 
-def extract_auth_code(str):
-	arr = str.split('&')
-	return arr[0]
-
 def getPersonalInfo(token):
 
 	headers = {
@@ -41,7 +37,6 @@ def getPersonalInfo(token):
 
 class get_auth_code(Resource):
 	def get(self):
-		w = client_id + ":" + secret_id
 
 		auth_code = request.args.get('code')
 		

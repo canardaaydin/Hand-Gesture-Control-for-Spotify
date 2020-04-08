@@ -2,9 +2,12 @@
     "name": "Gestify",
     "version": "1.0",
     "description": "Spotify control using hand gestures",
-    "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "webNavigation"],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["background.js","compatibility.js",
+        "objectdetect.js",
+        "handfist.js",
+        "jquery.js"],
       "persistent": false
     },
     "browser_action": {
