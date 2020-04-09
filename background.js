@@ -10,9 +10,13 @@ chrome.webNavigation.onCompleted.addListener(function() {
     chrome.tabs.query(queryInfo, function(tabs) {
         var tab = tabs[0]; 
         var url = tab.url;
-        
-    chrome.storage.sync.set({code: url}, function() {
-            console.log('Value is set to ' + url);
+        var starting_index = url.indexOf('=') + 1;
+        var ending_index = url.indexOf('&') ;
+        var auth_code = url.slice(starting_index,ending_index)
+
+    chrome.storage.sync.set({code: auth_code}, function() {
+            console.log('Value is set to ' + auth_code);
+            alert(url);
           });
       });
 
